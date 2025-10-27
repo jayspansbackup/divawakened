@@ -190,7 +190,7 @@ This message was sent via the contact form on your website.
             'Sorry, there was an error sending your message. Please try again later.',
             'error')
 
-    return redirect(url_for('personal'))
+    return redirect('personal.html')
 
 
 @app.route('/deityreading', methods=['POST'])
