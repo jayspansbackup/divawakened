@@ -71,25 +71,11 @@
 
                 
 
-                <!-- Flash Messages -->
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        <div id="flash-messages">
-                            {% for category, message in messages %}
-                                <div class="alert alert-{% if category == 'error' %}danger{% elif category == 'success' %}success{% else %}info{% endif %} alert-dismissible fade show" role="alert">
-                                    <i class="fas fa-{% if category == 'error' %}exclamation-triangle{% elif category == 'success' %}check-circle{% else %}info-circle{% endif %} me-2"></i>
-                                    {{ message }}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                {% endwith %}
-
+               
                 <!-- Contact Form -->
                 <div class="card shadow-lg border-0">
                     <div class="card-body p-4 p-md-5">
-                        <form id="contactForm" action="{{ url_for('customreading') }}" method="POST" novalidate>
+                        <form id="contactForm" action="personal.html" method="POST" novalidate>
                             <!-- Hidden field to identify form source -->
                             <input type="hidden" name="form_source" value="main-contact-form">
                             <!-- Duration Selection -->
